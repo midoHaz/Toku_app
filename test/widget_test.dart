@@ -7,7 +7,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:tharwat/screens/birthday.dart';
+import 'package:tharwat/screens/learning_screens/birthday.dart';
 
 import 'package:tharwat/main.dart';
 
