@@ -2,7 +2,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:tharwat/Reusable_component/reusable.dart';
+import 'package:tharwat/screens/Toku_App/Family_member_page.dart';
 import 'package:tharwat/screens/Toku_App/Numbers_page.dart';
+import 'package:tharwat/screens/Toku_App/Phrases_page.dart';
+
+import 'colors_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -32,17 +36,31 @@ class HomePage extends StatelessWidget {
           categoryChoose(
             text: "FamilyMembers",
             backcolor: const Color(0xff558B37),
-            ontap: () {},
+            ontap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context){
+                return FamilyPage();
+              }));
+            },
           ),
           categoryChoose(
             text: "Colors",
             backcolor: const Color(0xff79359F),
-            ontap: () {},
+            ontap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (BuildContext context) {
+                    return ColorsPage();
+                  }));
+            },
           ),
           categoryChoose(
             text: "Phrases",
             backcolor: const Color(0xff50ADC7),
-            ontap: () {},
+            ontap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (BuildContext context) {
+                    return PhrasesPage();
+                  }));
+            },
           ),
         ],
       ),
